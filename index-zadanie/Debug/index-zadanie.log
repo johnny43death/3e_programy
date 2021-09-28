@@ -1,0 +1,3 @@
+﻿  index-zadanie.cpp
+E:\Kajetan Rosik\index-zadanie\index-zadanie.cpp(8,15): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+  index-zadanie.vcxproj -> E:\Kajetan Rosik\index-zadanie\Debug\index-zadanie.exe

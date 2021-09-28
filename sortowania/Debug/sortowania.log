@@ -1,0 +1,52 @@
+﻿  sortowania.cpp
+E:\Kajetan Rosik\sortowania\sortowania.cpp(9,15): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+E:\Kajetan Rosik\sortowania\sortowania.cpp(18,27): error C2601: "sortwst": definicje funkcji lokalnych są niedozwolone
+E:\Kajetan Rosik\sortowania\sortowania.cpp(7): message : ten wiersz zawiera znak „{”, który nie został jeszcze dopasowany
+E:\Kajetan Rosik\sortowania\sortowania.cpp(33,27): error C2601: "sortwyb": definicje funkcji lokalnych są niedozwolone
+E:\Kajetan Rosik\sortowania\sortowania.cpp(7): message : ten wiersz zawiera znak „{”, który nie został jeszcze dopasowany
+E:\Kajetan Rosik\sortowania\sortowania.cpp(19,16): error C2065: "i": niezadeklarowany identyfikator
+E:\Kajetan Rosik\sortowania\sortowania.cpp(19,20): error C2065: "n": niezadeklarowany identyfikator
+E:\Kajetan Rosik\sortowania\sortowania.cpp(20,33): error C2065: "n": niezadeklarowany identyfikator
+E:\Kajetan Rosik\sortowania\sortowania.cpp(21,1): error C2109: indeks dolny wymaga tablicy lub wskaźnika typu
+E:\Kajetan Rosik\sortowania\sortowania.cpp(22,1): error C2109: indeks dolny wymaga tablicy lub wskaźnika typu
+E:\Kajetan Rosik\sortowania\sortowania.cpp(22,21): error C2672: „std::swap”: nie znaleziono zgodnej przeciążonej funkcji
+E:\Kajetan Rosik\sortowania\sortowania.cpp(22,1): error C2780: "void std::swap(std::unique_ptr<_Ty,_Dx> &,std::unique_ptr<_Ty,_Dx> &) noexcept": oczekuje się 2 argumentów - dostarczono 1
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(3447): message : zobacz deklarację „std::swap”
+E:\Kajetan Rosik\sortowania\sortowania.cpp(22,1): error C2780: "void std::swap(std::weak_ptr<_Ty> &,std::weak_ptr<_Ty> &) noexcept": oczekuje się 2 argumentów - dostarczono 1
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(3061): message : zobacz deklarację „std::swap”
+E:\Kajetan Rosik\sortowania\sortowania.cpp(22,1): error C2780: "void std::swap(std::shared_ptr<_Ty> &,std::shared_ptr<_Ty> &) noexcept": oczekuje się 2 argumentów - dostarczono 1
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(1918): message : zobacz deklarację „std::swap”
+E:\Kajetan Rosik\sortowania\sortowania.cpp(22,1): error C2780: "void std::swap(std::basic_string<_Elem,_Traits,_Alloc> &,std::basic_string<_Elem,_Traits,_Alloc> &) noexcept": oczekuje się 2 argumentów - dostarczono 1
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(4679): message : zobacz deklarację „std::swap”
+E:\Kajetan Rosik\sortowania\sortowania.cpp(22,1): error C2780: "void std::swap(std::pair<_Ty1,_Ty2> &,std::pair<_Ty1,_Ty2> &) noexcept(<expr>)": oczekuje się 2 argumentów - dostarczono 1
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(341): message : zobacz deklarację „std::swap”
+E:\Kajetan Rosik\sortowania\sortowania.cpp(22,1): error C2780: "void std::swap(_Ty (&)[_Size],_Ty (&)[_Size]) noexcept(<expr>)": oczekuje się 2 argumentów - dostarczono 1
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\type_traits(2022): message : zobacz deklarację „std::swap”
+E:\Kajetan Rosik\sortowania\sortowania.cpp(22,1): error C2780: "void std::swap(_Ty &,_Ty &) noexcept(<expr>)": oczekuje się 2 argumentów - dostarczono 1
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\type_traits(2019): message : zobacz deklarację „std::swap”
+E:\Kajetan Rosik\sortowania\sortowania.cpp(25,13): error C2065: "i": niezadeklarowany identyfikator
+E:\Kajetan Rosik\sortowania\sortowania.cpp(28,29): error C2065: "n": niezadeklarowany identyfikator
+E:\Kajetan Rosik\sortowania\sortowania.cpp(29,1): error C2109: indeks dolny wymaga tablicy lub wskaźnika typu
+E:\Kajetan Rosik\sortowania\sortowania.cpp(34,1): error C2082: ponowne zdefiniowanie formalnego parametru "tab"
+E:\Kajetan Rosik\sortowania\sortowania.cpp(35,19): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+E:\Kajetan Rosik\sortowania\sortowania.cpp(38,1): error C2109: indeks dolny wymaga tablicy lub wskaźnika typu
+E:\Kajetan Rosik\sortowania\sortowania.cpp(39,1): error C2109: indeks dolny wymaga tablicy lub wskaźnika typu
+E:\Kajetan Rosik\sortowania\sortowania.cpp(48,1): error C2109: indeks dolny wymaga tablicy lub wskaźnika typu
+E:\Kajetan Rosik\sortowania\sortowania.cpp(49,1): error C2109: indeks dolny wymaga tablicy lub wskaźnika typu
+E:\Kajetan Rosik\sortowania\sortowania.cpp(53,1): error C2109: indeks dolny wymaga tablicy lub wskaźnika typu
+E:\Kajetan Rosik\sortowania\sortowania.cpp(53,13): error C2672: „std::swap”: nie znaleziono zgodnej przeciążonej funkcji
+E:\Kajetan Rosik\sortowania\sortowania.cpp(53,1): error C2780: "void std::swap(std::unique_ptr<_Ty,_Dx> &,std::unique_ptr<_Ty,_Dx> &) noexcept": oczekuje się 2 argumentów - dostarczono 1
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(3447): message : zobacz deklarację „std::swap”
+E:\Kajetan Rosik\sortowania\sortowania.cpp(53,1): error C2780: "void std::swap(std::weak_ptr<_Ty> &,std::weak_ptr<_Ty> &) noexcept": oczekuje się 2 argumentów - dostarczono 1
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(3061): message : zobacz deklarację „std::swap”
+E:\Kajetan Rosik\sortowania\sortowania.cpp(53,1): error C2780: "void std::swap(std::shared_ptr<_Ty> &,std::shared_ptr<_Ty> &) noexcept": oczekuje się 2 argumentów - dostarczono 1
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(1918): message : zobacz deklarację „std::swap”
+E:\Kajetan Rosik\sortowania\sortowania.cpp(53,1): error C2780: "void std::swap(std::basic_string<_Elem,_Traits,_Alloc> &,std::basic_string<_Elem,_Traits,_Alloc> &) noexcept": oczekuje się 2 argumentów - dostarczono 1
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(4679): message : zobacz deklarację „std::swap”
+E:\Kajetan Rosik\sortowania\sortowania.cpp(53,1): error C2780: "void std::swap(std::pair<_Ty1,_Ty2> &,std::pair<_Ty1,_Ty2> &) noexcept(<expr>)": oczekuje się 2 argumentów - dostarczono 1
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(341): message : zobacz deklarację „std::swap”
+E:\Kajetan Rosik\sortowania\sortowania.cpp(53,1): error C2780: "void std::swap(_Ty (&)[_Size],_Ty (&)[_Size]) noexcept(<expr>)": oczekuje się 2 argumentów - dostarczono 1
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\type_traits(2022): message : zobacz deklarację „std::swap”
+E:\Kajetan Rosik\sortowania\sortowania.cpp(53,1): error C2780: "void std::swap(_Ty &,_Ty &) noexcept(<expr>)": oczekuje się 2 argumentów - dostarczono 1
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\type_traits(2019): message : zobacz deklarację „std::swap”
+E:\Kajetan Rosik\sortowania\sortowania.cpp(60,1): error C2109: indeks dolny wymaga tablicy lub wskaźnika typu

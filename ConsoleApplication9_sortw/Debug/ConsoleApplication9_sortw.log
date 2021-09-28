@@ -1,0 +1,3 @@
+﻿  ConsoleApplication9_sortw.cpp
+E:\Kajetan Rosik\ConsoleApplication9_sortw\ConsoleApplication9_sortw.cpp(9,15): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+  ConsoleApplication9_sortw.vcxproj -> E:\Kajetan Rosik\ConsoleApplication9_sortw\Debug\ConsoleApplication9_sortw.exe
