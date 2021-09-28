@@ -1,0 +1,5 @@
+﻿  wektory_zadanie2.cpp
+E:\Kajetan Rosik\github\3e_programy\wektory_zadanie2\wektory_zadanie2.cpp(7,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+E:\Kajetan Rosik\github\3e_programy\wektory_zadanie2\wektory_zadanie2.cpp(31,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+E:\Kajetan Rosik\github\3e_programy\wektory_zadanie2\wektory_zadanie2.cpp(36,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  wektory_zadanie2.vcxproj -> E:\Kajetan Rosik\github\3e_programy\wektory_zadanie2\Debug\wektory_zadanie2.exe
