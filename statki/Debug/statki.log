@@ -1,0 +1,4 @@
+﻿  statki.cpp
+E:\Kajetan Rosik\github\3e_programy\statki\statki.cpp(67,31): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+E:\Kajetan Rosik\github\3e_programy\statki\statki.cpp(71,31): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  statki.vcxproj -> E:\Kajetan Rosik\github\3e_programy\statki\Debug\statki.exe
