@@ -1,4 +1,6 @@
 ﻿  statki.cpp
-E:\Kajetan Rosik\github\3e_programy\statki\statki.cpp(67,31): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-E:\Kajetan Rosik\github\3e_programy\statki\statki.cpp(71,31): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+E:\Kajetan Rosik\github\3e_programy\statki\statki.cpp(65,18): warning C4101: "id": lokalna zmienna, do której nie istnieje odwołanie
+E:\Kajetan Rosik\github\3e_programy\statki\statki.cpp(82,31): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+E:\Kajetan Rosik\github\3e_programy\statki\statki.cpp(88,31): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+E:\Kajetan Rosik\github\3e_programy\statki\statki.cpp(114,15): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
   statki.vcxproj -> E:\Kajetan Rosik\github\3e_programy\statki\Debug\statki.exe
