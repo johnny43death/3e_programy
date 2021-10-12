@@ -73,18 +73,25 @@ void umiesc(int plansza[7][7], vector <int> statki[3], int a) {
     }
     wstaw(x, y, z, plansza, statki, a);
 }
-void umiesc_k(int plansza[7][7], vector <int> statki[3], int a) {
+int umiesc_k(int plansza[7][7], vector <int> statki[3], int a, int tabTMP[4][3], int l) {
     int x, y, z;
     bool ok = false;
+    int licznik = 0;
     while (ok == false) {
-        /*cout << "K" << a << endl;*/
+        if (licznik >= 100) {
+            return 0;
+        }
         x = rand() % 5 + 1;
         y = rand() % 5 + 1;
         z = rand() % 2;
         /*cout << x << " " << y << " " << z << endl;*/
         ok = sprawdz(x, y, z, plansza, a);
+        licznik++;
     }
-    wstaw(x, y, z, plansza, statki, a);
+    tabTMP[l][0] = x;
+    tabTMP[l][1] = y;
+    tabTMP[l][2] = z;
+    return 1;
 }
 int strzal(int x, int y, int plansza[7][7], vector <int> statki[3]) {
     int s = 0, id;
@@ -131,6 +138,7 @@ int main()
     const int n = 7;
     int x, y, s, zat = 0, zatk = 0, licznik = 0, los, t;
     int plansza1[n][n] = { 0 }, plansza2[n][n] = { 0 }, komp[25][2] = { 0 }, temp[3][2] = { 0 }, traf[4][2] = { 0 };
+    int tabTMP[4][3] = { 0 };
     string uplansza[n][n];
     vector <int> statki1[3], statki2[3];
     bool kto = true;
@@ -147,10 +155,20 @@ int main()
             komp[licznik++][1] = j;
         }
 
-    umiesc_k(plansza2, statki2, 3);
-    umiesc_k(plansza2, statki2, 2);
-    umiesc_k(plansza2, statki2, 1);
-    umiesc_k(plansza2, statki2, 1);
+    int anyErrors = 0;
+
+    while (anyErrors != 4) {
+        anyErrors = 0;
+        anyErrors += umiesc_k(plansza2, statki2, 3, tabTMP, 0);
+        anyErrors += umiesc_k(plansza2, statki2, 2, tabTMP, 1);
+        anyErrors += umiesc_k(plansza2, statki2, 1, tabTMP, 2);
+        anyErrors += umiesc_k(plansza2, statki2, 1, tabTMP, 3);
+    }
+
+    wstaw(tabTMP[0][0], tabTMP[0][1], tabTMP[0][2], plansza2, statki2, 3);
+    wstaw(tabTMP[1][0], tabTMP[1][1], tabTMP[1][2], plansza2, statki2, 2);
+    wstaw(tabTMP[2][0], tabTMP[2][1], tabTMP[2][2], plansza2, statki2, 1);
+    wstaw(tabTMP[3][0], tabTMP[3][1], tabTMP[3][2], plansza2, statki2, 1);
     umiesc(plansza1, statki1, 3);
     umiesc(plansza1, statki1, 2);
     umiesc(plansza1, statki1, 1);
