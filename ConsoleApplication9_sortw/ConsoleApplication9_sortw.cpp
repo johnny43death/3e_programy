@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    int tab[5], i = 0, n = 10, min, p;
+    int tab[5], i = 0, n = 5, min, p;
     srand(time(NULL));
 
     for (int x = 0; x < n; x++) {
