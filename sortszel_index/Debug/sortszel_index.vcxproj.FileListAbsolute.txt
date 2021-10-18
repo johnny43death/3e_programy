@@ -1,0 +1,2 @@
+D:\github\3e_programy\sortszel_index\Debug\sortszel_index.exe
+D:\github\3e_programy\sortszel_index\Debug\sortszel_index.pdb
