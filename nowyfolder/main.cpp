@@ -118,9 +118,9 @@ void logVector(vector<int> vect, int n) {
 
 int main() {
 
-    //WSKAŹNIKI
+    //POINTERY
 
-    int *pointer = new int(); // new int(INT VALUE) wtedy wskaźnik = INT VALUE
+    int *pointer = new int(); // new int(INT VALUE) wtedy pointer = INT VALUE
     *pointer = 0;
     cout << "Value: " << *pointer << " Index: " << &pointer << endl;
 
