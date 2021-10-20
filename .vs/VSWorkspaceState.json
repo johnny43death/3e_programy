@@ -1,9 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\index-zadanie",
-    "\\wektory"
+    "\\delegowanie_konstruktorow",
+    "\\destruktory",
+    "\\klasy_obiektow",
+    "\\przeciazanie_konstruktorow",
+    "\\przeciazanie_konstruktorow2",
+    "\\struktura_zadanie1",
+    "\\struktury"
   ],
-  "SelectedNode": "\\index-zadanie\\index-zadanie.cpp",
+  "SelectedNode": "\\struktury\\struktury.cpp",
   "PreviewInSolutionExplorer": false
 }
