@@ -9,11 +9,15 @@ public:
     void pobierz(int&,int&);
 };
 
-class Prostopadloscian {
+class Prostopadloscian
+{
 private:
-    int h=5;
+    int a;
+    int b;
+    int h = 5;
+
 public:
-    Prostopadloscian(int,int);
+    Prostopadloscian(int, int);
     int objetosc();
     int pole();
 };
