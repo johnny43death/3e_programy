@@ -11,7 +11,7 @@ public:
     void set(int, int);
     QString toString();
     double toDouble();
-    Fraction add(const Fraction&);
+    Fraction add(const Fraction&); // funkcje z podstawowymi operacjami arytmetycznymi, wykorzystujące obiekt i jego pochodną 'other'
     Fraction subtract(const Fraction&);
     Fraction multiply(const Fraction&);
     Fraction divide(const Fraction&);

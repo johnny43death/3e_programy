@@ -2,13 +2,13 @@
 
 #include <QString>
 
-void Fraction::set(int numerator, int denominator) {
+void Fraction::set(int numerator, int denominator) { // ustawianie wartości (coś jak konstruktor parametryczny)
     m_Numerator = numerator;
     m_Denominator = denominator;
 }
 
 QString Fraction::toString(){
-    return QString("ulamek: %1 / %2 \n").arg(m_Numerator).arg(m_Denominator);
+    return QString("ulamek: %1 / %2 \n").arg(m_Numerator).arg(m_Denominator); // specjalny sposób wypisywania ułamków
 }
 
 double Fraction::toDouble(){

@@ -1,16 +1,16 @@
 #include "naglowek.h"
 
-Prostokat::Prostokat(int pA, int pB){
+Prostokat::Prostokat(int pA, int pB){ // konstruktor parametryczny do prostopadłościanu
     a = pA;
     b = pB;
 }
 
-void Prostokat::pobierz(int &pA, int &pB){
+void Prostokat::pobierz(int &pA, int &pB){ // funkcja do odprywatyzowywania zmiennych
     pA = a;
     pB = b;
 }
 
-Prostopadloscian::Prostopadloscian(int pA, int pB){
+Prostopadloscian::Prostopadloscian(int pA, int pB){ // konstruktor parametryczny do prostopadłościanu
     a = pA;
     b = pB;
 }

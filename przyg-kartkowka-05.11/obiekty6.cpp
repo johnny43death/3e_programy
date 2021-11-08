@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <math.h>
 using namespace std;
 
@@ -26,6 +26,7 @@ Odleglosc::Odleglosc() {
 }
 
 //delegacja (wywołanie) konstruktora domyślnego w parametrycznym
+//(zazwyczaj potrzebne, gdy zdefiniowane zmienne są prywatne)
 Odleglosc::Odleglosc(Punkt pA, Punkt pB) : A(pA), B(pB) {}
 
 double Odleglosc::oblicz() {
