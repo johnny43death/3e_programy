@@ -1,0 +1,3 @@
+﻿  kartkowka_klasy.cpp
+E:\Kajetan Rosik\github\3e_programy\kartkowka_klasy\kartkowka_klasy.cpp(60,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+  kartkowka_klasy.vcxproj -> E:\Kajetan Rosik\github\3e_programy\kartkowka_klasy\Debug\kartkowka_klasy.exe
