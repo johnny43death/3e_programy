@@ -58,31 +58,36 @@ void Pokoj::wyswietlDane() {
 int main() {
 	srand(time(NULL));
 
-	Pokoj p1(rand() % 9, rand() % 9);
-	p1.obliczPole();
-	Pokoj p2(rand() % 9, rand() % 9);
-	p2.obliczPole();
-	Pokoj p3(rand() % 9, rand() % 9);
-	p3.obliczPole();
-	Pokoj p4(rand() % 9, rand() % 9);
-	p4.obliczPole();
-	Pokoj p5(rand() % 9, rand() % 9);
-	p5.obliczPole();
-	Pokoj p6(rand() % 9, rand() % 9);
-	p6.obliczPole();
-	Pokoj p7(rand() % 9, rand() % 9);
-	p7.obliczPole();
-	Pokoj p8(rand() % 9, rand() % 9);
-	p8.obliczPole();
-	Pokoj p9(rand() % 9, rand() % 9);
-	p9.obliczPole();
-	Pokoj p10(rand() % 9, rand() % 9);
-	p10.obliczPole();
+	Pokoj p1(rand() % 9+1, rand() % 9+1);
+	p1.ustaw(p1.obliczPole());
+	Pokoj p2(rand() % 9+1, rand() % 9+1);
+	p2.ustaw(p2.obliczPole());
+	Pokoj p3(rand() % 9+1, rand() % 9+1);
+	p3.ustaw(p3.obliczPole());
+	Pokoj p4(rand() % 9+1, rand() % 9+1);
+	p4.ustaw(p4.obliczPole());
+	Pokoj p5(rand() % 9+1, rand() % 9+1);
+	p5.ustaw(p5.obliczPole());
+	Pokoj p6(rand() % 9+1, rand() % 9+1);
+	p6.ustaw(p6.obliczPole());
+	Pokoj p7(rand() % 9+1, rand() % 9+1);
+	p7.ustaw(p7.obliczPole());
+	Pokoj p8(rand() % 9+1, rand() % 9+1);
+	p8.ustaw(p8.obliczPole());
+	Pokoj p9(rand() % 9+1, rand() % 9+1);
+	p9.ustaw(p9.obliczPole());
+	Pokoj p10(rand() % 9+1, rand() % 9+1);
+	p10.ustaw(p10.obliczPole());
 	p1.wyswietlDane();
 	p2.wyswietlDane();
 	p3.wyswietlDane();
 	p4.wyswietlDane();
 	p5.wyswietlDane();
+	p6.wyswietlDane();
+	p7.wyswietlDane();
+	p8.wyswietlDane();
+	p9.wyswietlDane();
+	p10.wyswietlDane();
 
 	Pokoj kopia(p10);
 }
