@@ -14,7 +14,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    int komp, uzyt;
+    int komp, uzyt, start, ileprob;
     void wybierz(int);
     void wygrana(int, int);
 
@@ -24,6 +24,10 @@ private slots:
     void on_u2_clicked();
 
     void on_u3_clicked();
+
+    void on_reset_clicked();
+
+    void on_startButton_clicked();
 
 private:
     Ui::MainWindow *ui;

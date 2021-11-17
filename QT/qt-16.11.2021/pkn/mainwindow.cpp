@@ -67,3 +67,7 @@ void MainWindow::on_reset_clicked()
     ui->label_2->setNum(0);
 }
 
+void MainWindow::on_startButton_clicked()
+{
+    start = ui->value()
+}
