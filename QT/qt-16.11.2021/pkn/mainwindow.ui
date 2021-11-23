@@ -402,7 +402,7 @@
      <rect>
       <x>270</x>
       <y>70</y>
-      <width>71</width>
+      <width>191</width>
       <height>31</height>
      </rect>
     </property>
@@ -412,7 +412,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Ile prób? </string>
+     <string>Do ilu zwycięstw grasz? </string>
     </property>
    </widget>
    <widget class="QLabel" name="label_5">
@@ -430,7 +430,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Wykorzystane próby: </string>
+     <string>Zwycięstwa: </string>
     </property>
    </widget>
    <widget class="QProgressBar" name="progressBar">

@@ -8,6 +8,12 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     srand(time(NULL));
+    ui->u1->setDisabled(1);
+    ui->u2->setDisabled(1);
+    ui->u3->setDisabled(1);
+    ui->k1->setDisabled(1);
+    ui->k2->setDisabled(1);
+    ui->k3->setDisabled(1);
 }
 
 MainWindow::~MainWindow()
@@ -25,15 +31,31 @@ void MainWindow::wybierz(int przycisk){
 }
 
 void MainWindow::wygrana(int cpu, int usr){
-    int wynik = (cpu-usr+3)%3;
+    wynik = (cpu-usr+3)%3;
+    int k,u;
     if(wynik==1){
         wynik = ui->label->text().toInt();
         wynik++;
         ui->label->setNum(wynik);
+        u = wynik;
+        if(start!=ilegier){
+            ui->progressBar->setMaximum(ilegier);
+            start++;
+            ui->progressBar->setValue(start);
+        }
     }else if(wynik==2){
         wynik = ui->label_2->text().toInt();
         wynik++;
         ui->label_2->setNum(wynik);
+        k = wynik;
+        if(start!=ilegier){
+            ui->progressBar->setMaximum(ilegier);
+            start++;
+            ui->progressBar->setValue(start);
+        }
+    }
+    if(start==ilegier && ){
+
     }
 }
 
@@ -65,9 +87,25 @@ void MainWindow::on_reset_clicked()
 {
     ui->label->setNum(0);
     ui->label_2->setNum(0);
+    ui->u1->setDisabled(1);
+    ui->u2->setDisabled(1);
+    ui->u3->setDisabled(1);
+    ui->k1->setDisabled(1);
+    ui->k2->setDisabled(1);
+    ui->k3->setDisabled(1);
+    ui->horizontalSlider->setEnabled(1);
 }
 
 void MainWindow::on_startButton_clicked()
 {
-    start = ui->value()
+    wynik = 0;
+    start = 0;
+    ilegier = ui->horizontalSlider->value();
+    ui->horizontalSlider->setDisabled(1);
+    ui->u1->setEnabled(1);
+    ui->u2->setEnabled(1);
+    ui->u3->setEnabled(1);
+    ui->k1->setEnabled(1);
+    ui->k2->setEnabled(1);
+    ui->k3->setEnabled(1);
 }

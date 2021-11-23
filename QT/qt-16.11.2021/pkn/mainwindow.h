@@ -14,7 +14,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    int komp, uzyt, start, ileprob;
+    int komp, uzyt, start, wynik, ilegier;
     void wybierz(int);
     void wygrana(int, int);
 
