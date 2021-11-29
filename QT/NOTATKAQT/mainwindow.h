@@ -1,6 +1,5 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -10,19 +9,14 @@ QT_END_NAMESPACE
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-
 public:
-    int komputer, uzytkownik;
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    void wybierz(int);
-    void wygrana(int, int);
+    int wartoscProgressBara = 0;
 
 private slots:
-    void on_u1_clicked();
-    void on_u2_clicked();
-    void on_u3_clicked();
-    void on_reset_clicked();
+    void on_pierwszySlider_valueChanged(int value);
+    void on_zatwierdzButton_clicked();
 
 private:
     Ui::MainWindow *ui;
