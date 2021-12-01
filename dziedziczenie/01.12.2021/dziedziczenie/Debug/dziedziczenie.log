@@ -1,0 +1,3 @@
+﻿  dziedziczenie.cpp
+E:\Kajetan Rosik\github\3e_programy\dziedziczenie\01.12.2021\dziedziczenie\dziedziczenie.cpp(197,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+  dziedziczenie.vcxproj -> E:\Kajetan Rosik\github\3e_programy\dziedziczenie\01.12.2021\dziedziczenie\Debug\dziedziczenie.exe
