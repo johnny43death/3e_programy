@@ -1,0 +1,23 @@
+﻿  mechanizmyabstrakcji.cpp
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(47,26): error C2440: "inicjowanie": nie można konwertować z "Uczen *" na "Pracownik *"
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(47,15): message : Wskazane typy nie są powiązane; konwersja wymaga operatora reinterpret_cast, rzutowania w stylu języka C lub rzutowania w stylu funkcji
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(48,3): error C3927: „->”: nie można używać końcowego typu zwracanego po deklaratorze niebędącym funkcją
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(48,5): error C3613: brak typu zwracanego po „->” (przyjęto typ „int”)
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(48,10): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(48,1): error C2040: "u1": "int"różni się w poziomach pośredników od "Pracownik *"
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(48,5): error C2146: błąd składniowy: brakuje „;” przed identyfikatorem „imie”
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(49,3): error C3927: „->”: nie można używać końcowego typu zwracanego po deklaratorze niebędącym funkcją
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(49,5): error C3613: brak typu zwracanego po „->” (przyjęto typ „int”)
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(49,14): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(49,1): error C2040: "u1": "int"różni się w poziomach pośredników od "Pracownik *"
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(49,5): error C2146: błąd składniowy: brakuje „;” przed identyfikatorem „nazwisko”
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(50,3): error C3927: „->”: nie można używać końcowego typu zwracanego po deklaratorze niebędącym funkcją
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(50,5): error C3613: brak typu zwracanego po „->” (przyjęto typ „int”)
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(50,16): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(50,5): error C2146: błąd składniowy: brakuje „;” przed identyfikatorem „stanowisko”
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(51,3): error C3927: „->”: nie można używać końcowego typu zwracanego po deklaratorze niebędącym funkcją
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(51,5): error C3613: brak typu zwracanego po „->” (przyjęto typ „int”)
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(51,17): error C4430: brak specyfikatora typu - założono, że int. Uwaga: C++ nie obsługuje domyślnie typu int
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(51,1): error C2086: "int p1": zmiana definicji
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(50): message : zobacz deklarację „p1”
+E:\Kajetan Rosik\github\3e_programy\08.12.2021\mechanizmyabstrakcji\mechanizmyabstrakcji.cpp(51,5): error C2146: błąd składniowy: brakuje „;” przed identyfikatorem „wyswietlDane”

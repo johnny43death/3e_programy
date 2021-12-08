@@ -47,6 +47,6 @@ int main() {
 	p1->wyswietl();
 
 	Naczelnik* p2 = new Naczelnik;
-	p2->set("Kamil", "Armata", "st. porucznik", "wydzial rabunkow");
+	p2->set("Kamil", "Armata", "st. porucznik", "wydzial rabunkow i kradziezy");
 	p2->wyswietl();
 }
