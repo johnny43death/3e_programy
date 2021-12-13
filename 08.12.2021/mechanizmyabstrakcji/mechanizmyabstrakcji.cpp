@@ -11,7 +11,7 @@ public:
 
 class Osoba {
 public:
-    string imie, nazwisko, nazwisko;
+    string imie, nazwisko;
 };
 
 class Pracownik : public Osoba, public Info {
