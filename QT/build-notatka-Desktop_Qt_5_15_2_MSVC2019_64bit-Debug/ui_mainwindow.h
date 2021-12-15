@@ -83,6 +83,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);
+        QObject::connect(pierwszySlider, SIGNAL(valueChanged(int)), wynikLabel, SLOT(setNum(int)));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
