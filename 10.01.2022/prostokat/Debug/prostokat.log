@@ -1,0 +1,7 @@
+﻿  prostokat.cpp
+E:\Kajetan Rosik\github\3e_programy\10.01.2022\prostokat\prostokat.cpp(26,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+E:\Kajetan Rosik\github\3e_programy\10.01.2022\prostokat\prostokat.cpp(28,7): warning C4302: "<function-style-cast>": obcięcie z "const char *" do "char"
+E:\Kajetan Rosik\github\3e_programy\10.01.2022\prostokat\prostokat.cpp(41,14): warning C4244: "inicjowanie": konwersja z "float" do "int", możliwa utrata danych
+E:\Kajetan Rosik\github\3e_programy\10.01.2022\prostokat\prostokat.cpp(43,15): warning C4244: "inicjowanie": konwersja z "int" do "float", możliwa utrata danych
+E:\Kajetan Rosik\github\3e_programy\10.01.2022\prostokat\prostokat.cpp(44,14): warning C4244: "inicjowanie": konwersja z "int" do "float", możliwa utrata danych
+  prostokat.vcxproj -> E:\Kajetan Rosik\github\3e_programy\10.01.2022\prostokat\Debug\prostokat.exe
