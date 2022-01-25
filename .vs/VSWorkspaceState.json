@@ -1,14 +1,15 @@
 {
   "ExpandedNodes": [
-    "",
+    "\\08.12.2021",
+    "\\08.12.2021\\mechanizmyabstrakcji",
+    "\\10.01.2022",
+    "\\12.01.2022",
+    "\\13.12.2021",
+    "\\20.12.2021",
+    "\\24.11.2021",
     "\\delegowanie_konstruktorow",
     "\\destruktory",
-    "\\klasy_obiektow",
-    "\\przeciazanie_konstruktorow",
-    "\\przeciazanie_konstruktorow2",
-    "\\struktura_zadanie1",
-    "\\struktury"
+    "\\dziedziczenie"
   ],
-  "SelectedNode": "\\struktury\\struktury.cpp",
   "PreviewInSolutionExplorer": false
 }

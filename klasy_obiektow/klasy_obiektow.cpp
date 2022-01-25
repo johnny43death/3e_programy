@@ -2,7 +2,7 @@
 
 using namespace std;
 
-/*class Pracownik {
+class Pracownik {
 public:
     string imie, nazwisko;
     void ustawImie(string);
@@ -31,7 +31,7 @@ int main()
     p2.ustawImie("adam");
     p2.ustawNazwisko("nowak");
     p2.wyswietlDane();
-}*/
+}
 
 /*class Prostokat {
 public:
@@ -186,7 +186,7 @@ int main() {
     pracownik.wyswietlDane();
 }*/
 
-struct Data { //konstruktor domyślny
+/*struct Data { //konstruktor domyślny
     int dd, mm, rr;
 };
 
@@ -225,4 +225,4 @@ int main() {
     pracownik3.imie = "jan";
     pracownik3.nazwisko = "kowalski";
     pracownik3.wyswietlDane();
-}
+}*/

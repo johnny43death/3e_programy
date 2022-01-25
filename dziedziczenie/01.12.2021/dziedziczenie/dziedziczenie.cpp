@@ -143,7 +143,7 @@ public:
 	int obwod();
 };
 
-class Prostopadloscian : private Prostokat {
+class Prostopadloscian : public Prostokat {
 public:
 	int h;
 	Prostopadloscian();

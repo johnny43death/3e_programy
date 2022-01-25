@@ -46,31 +46,40 @@ class Pracownik {
 //	polimorfizm dynamiczny, przeciążanie klas, tworzenie wiązań wraz z działaniem programu, ergo na bieżąco
 public:
 	string imie, nazwisko;
-	//	metoda wirtualna metoda pozwala będzie się zmieniać w zależności od tego, w której klasie się znajdujemy
+	//  wirtualna metoda będzie się zmieniać w zależności od tego, w której klasie się znajdujemy
 	//	takie podejście pozwala na korzystanie ze wskaźników, zamiast zwykłego "p2.imie = "
-	virtual void zwrocDane() = 0;
+	virtual void zwrocDane() {
+		cout << "Pracownik" << endl;
+		cout << imie << " " << nazwisko << endl << endl;
+	};
 };
 
 class Nauczyciel : public Pracownik {
 public:
 	string przedmiot;
-	void zwrocDane();
+	virtual void zwrocDane() {
+		cout << "Nauczyciel" << endl;
+		cout << imie << " " << nazwisko << " " << przedmiot << endl << endl;
+	};
 };
 
 class Wychowawca : public Nauczyciel {
 public:
 	string klasa;
-	void zwrocDane();
+	virtual void zwrocDane() {
+		cout << "Wychowawca" << endl;
+		cout << imie << " " << nazwisko << " " << klasa << " " << przedmiot << endl << endl;
+	};
 };
 
 int main() {
+	Pracownik p1;
 	Pracownik* w_pracownik;
 
-	Pracownik p1;
 	w_pracownik = &p1;
 	w_pracownik->imie = "jan";
 	w_pracownik->nazwisko = "kowalski";
-	w_pracownik->zwrocDane();
+	p1.zwrocDane();
 
 	Nauczyciel p2;
 	w_pracownik = &p2;
@@ -85,22 +94,4 @@ int main() {
 	w_pracownik->imie = "maria";
 	w_pracownik->nazwisko = "jakas";
 	w_pracownik->zwrocDane();
-}
-
-void Pracownik::zwrocDane()
-{
-	cout << "Pracownik" << endl;
-	cout << imie << " " << nazwisko << endl << endl;
-}
-
-void Nauczyciel::zwrocDane()
-{
-	cout << "Nauczyciel" << endl;
-	cout << imie << " " << nazwisko << " " << przedmiot << endl << endl;
-}
-
-void Wychowawca::zwrocDane()
-{
-	cout << "Wychowawca" << endl;
-	cout << imie << " " << nazwisko << " " << klasa << " " << przedmiot << endl << endl;
 }
