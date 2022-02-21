@@ -1,0 +1,10 @@
+﻿  friendP.cpp
+E:\Kajetan Rosik\github\3e_programy\26.01.2022\friendP\friendP.cpp(20,1): error C2989: "Bryla": klasa szablon została już zadeklarowana jako nieklasowy szablon
+E:\Kajetan Rosik\github\3e_programy\26.01.2022\friendP\friendP.cpp(16): message : zobacz deklarację „Bryla”
+E:\Kajetan Rosik\github\3e_programy\26.01.2022\friendP\friendP.cpp(19,1): error C3857: „Bryla”: Wiele list parametrów szablon nie jest dozwolonych
+E:\Kajetan Rosik\github\3e_programy\26.01.2022\friendP\friendP.cpp(38,10): error C2059: błąd składniowy: „<”
+E:\Kajetan Rosik\github\3e_programy\26.01.2022\friendP\friendP.cpp(38,22): error C2143: błąd składniowy: brakuje „;” przed „{”
+E:\Kajetan Rosik\github\3e_programy\26.01.2022\friendP\friendP.cpp(38,26): error C2143: błąd składniowy: brakuje „;” przed „}”
+E:\Kajetan Rosik\github\3e_programy\26.01.2022\friendP\friendP.cpp(39,10): error C2059: błąd składniowy: „<”
+E:\Kajetan Rosik\github\3e_programy\26.01.2022\friendP\friendP.cpp(39,25): error C2143: błąd składniowy: brakuje „;” przed „{”
+E:\Kajetan Rosik\github\3e_programy\26.01.2022\friendP\friendP.cpp(39,32): error C2143: błąd składniowy: brakuje „;” przed „}”
