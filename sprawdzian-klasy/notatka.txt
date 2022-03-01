@@ -1,0 +1,669 @@
+Klasy i obiekty
+
+klasy i obiekty
+tworzenie i inicjowanie obiektów
+hermetyzacja danych
+mechanizm dziedziczenia
+polimorfizm
+mechanizm abstrakcji
+funkcje i klasy zaprzyjaźnione
+szablony funkcji i klas
+obsługa błędów i wyjątków
+
+
+przykładowa klasa z funkcjami
+
+class Prostopadloscian {
+private:
+    int a, b, h;
+public:
+    konstruktor domyślny
+	Prostopadloscian() {
+        int a_i, b_i, h_i;
+        cout << "Wartosc boku a podstawy: ";
+        cin >> a_i;
+        cout << "Wartosc boku b podstawy: ";
+        cin >> b_i;
+        cout << "Wartosc wysokosci: ";
+        cin >> h_i;
+        a = a_i;
+        b = b_i;
+        h = h_i;
+    };
+    void pole() {
+        cout << "Pole powierzchni calkowitej prostopadloscianu wynosi: " << ((2 * a * b) + (2 * a * h) + (2 * b * h));
+    };
+    void objetosc() {
+        cout << "Objetosc prostopadloscianu wynosi " << (a * b * h);
+    };
+    void krawedzie() {
+        cout << "Bok a podstawy: " << a << " bok b podstawy: " << b << " wysokosc prostopadloscianu: " << h;
+    };
+};
+
+
+hermetyzacja i dziedziczenie
+hermetyzacja, wiadomo - w public jest wszystko dostępne, 
+dla private to trzeba robić gettery i settery robić żeby mieć do tego dostęp i aby to zmieniać
+
+nie dziedziczy się tam tego co w private, za to co w protected się dziedziczy
+można tez dziedziczyć pisząc : private Klasa { lub : protected Klasa { ale to działa jakoś inaczej w kwestii
+tego co jest dziedziczone
+
+Są 3 typy dziedziczenia: publiczne (public), chronione (protected) i prywatne (private). Różnią się dostępem do odziedziczonych składowych w klasie pochodnej:
+
+Dziedziczenie publiczne jest najczęściej stosowane. Składowe publiczne klasy bazowej są odziedziczone jako publiczne, a składowe chronione jako chronione.
+W dziedziczeniu chronionym składowe publiczne są dziedziczone jako chronione, a składowe chronione jako chronione.
+Dziedziczenie prywatne jest domyślne (gdy nie jest podany typ dziedziczenia). Składowe publiczne są dziedziczone jako prywatne, a chronione jako prywatne.
+
+We wszystkich sposobach dziedziczenia, składowe prywatne klasy bazowej są dziedziczone jako prywatne, ale klasa pochodna nie ma do nich dostępu. Aby klasa pochodna miała dostęp do prywatnych składowych klasy bazowej, musi być zaprzyjaźniona z klasą bazową.
+
+#include <iostream>
+using namespace std;
+
+class Osoba {
+public:
+    string imie, nazwisko;
+};
+class Info {
+    virtual void dane() = 0;
+};
+//dziedziczenie właściwości dwóch klas na raz
+class Policjant : public Osoba, public Info {
+public:
+    string stopien;
+    void dane() {
+        cout << stopien << " " << imie << " " << nazwisko << endl;
+    }
+};
+
+class Naczelnik : public Policjant {
+public:
+    string wydzial;
+    void dane() {
+        cout << stopien << " " << imie << " " << nazwisko << " " << wydzial << endl;
+    }
+};
+
+
+int main()
+{
+    Policjant* p1 = new Policjant;
+    Policjant* p2 = new Policjant;
+
+    p1->imie = "Jan";
+    p1->nazwisko = "Komalewski";
+    p1->stopien = "Młodszy komisarz";
+
+    p2->imie = "Mariusz";
+    p2->nazwisko = "Straton";
+    p2->stopien = "Starszy komisarz";
+
+
+    Naczelnik* n1 = new Naczelnik;
+    Naczelnik* n2 = new Naczelnik;
+
+    n1->imie = "Andrzej";
+    n1->nazwisko = "Chomowicz";
+    n1->stopien = "Sekretarz";
+    n1->wydzial = "Administracja";
+
+    n2->imie = "Tadeusz";
+    n2->nazwisko = "Łochocki";
+    n2->stopien = "Inspektor";
+    n2->wydzial = "Przestepstwa podatkowe";
+
+    p1->dane();
+    p2->dane();
+
+    n1->dane();
+    n2->dane();
+}
+
+
+class Nauczyciel {
+protected:
+	string imie, nazwisko;
+};
+
+class Dyrektor : public Nauczyciel {
+private:
+	string szkola;
+};
+
+class Wychowawca : public Nauczyciel {
+private:
+	string klasa;
+public:
+	void setValues(string, string, string);
+	string getImie();
+	string getNazwisko();
+	string getKlasa();
+};
+
+void Wychowawca::setValues(string _imie, string _nazwisko, string _klasa) {
+	imie = _imie;
+	nazwisko = _nazwisko;
+	klasa = _klasa;
+}
+
+string Wychowawca::getImie() {
+	return imie;
+}
+
+string Wychowawca::getNazwisko() {
+	return nazwisko;
+}
+
+string Wychowawca::getKlasa() {
+	return klasa;
+}
+
+
+polimorfizm
+
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+class Pracownik {
+public:
+    string imie, nazwisko;
+    //deklarowanie że będzie poliformizm dynamiczny
+    virtual void zwrocDane();
+};
+
+/*
+protected - między klasami publicznie, publicznie prywatne
+private -
+
+polimorfizm statyczny - przeciążanie np.: metod, zachodzi w trakcie kompilacji
+
+polimorfizm dynamiczny - dzieje się na wskaźnikach
+polega na tym że definicja (w wypadku tego przykładu zwrocDane) 
+zależnie od klasy w jakiej jest może mieć inną defninicję
+(tworzymy pusty i potem w wyniku dziedziczenia się zmienia zawartość tejże definicji)
+*/
+class Nauczyciel : public Pracownik {
+public:
+    string przedmiot;
+    void zwrocDane();
+};
+class Wychowawca : public Nauczyciel {
+public:
+    string klasa;
+    void zwrocDane();
+};
+
+
+int main()
+{
+    Pracownik* w_pracownik;
+
+    Pracownik p1;
+    w_pracownik = &p1;
+    w_pracownik->imie = "jan";
+    w_pracownik->nazwisko = "kowalski";
+    w_pracownik->zwrocDane();
+
+    Nauczyciel p2;
+    w_pracownik = &p2;
+    w_pracownik->imie = "Adam";
+    w_pracownik->nazwisko = "Nowak";
+    //w_pracownik.
+    w_pracownik->zwrocDane();
+
+
+    Wychowawca p3;
+    w_pracownik = &p3;
+    w_pracownik->imie = "jan";
+    w_pracownik->nazwisko = "kowalski";
+    
+    w_pracownik->zwrocDane();
+}
+
+void Pracownik::zwrocDane() {
+    cout << "PRACOWNIK" << endl;
+    cout << imie << " " << nazwisko << endl;
+}
+
+void Nauczyciel::zwrocDane() {
+    cout << "NAUCZYCIEL" << endl;
+    cout << imie << " " << nazwisko << " " << przedmiot << endl;
+}
+
+void Wychowawca::zwrocDane() {
+    cout << "WYCHOWAWCA" << endl;
+    cout << imie << " " << nazwisko << " " << przedmiot << " " << klasa << endl;
+}
+
+
+
+mechanizm abstrakcji
+
+/*
+klasy abstrakcyjne
+nie tworzymy obiektów tej klasy ale korzystamy z nich aby budować inne klasy (np.: klasa osoba z atrybutami imie i nazwisko i na jej podstawie zrobimy klasę pracownik)
+klasy abstrakcyjne mają wyłącznie metody wirtualne, nie wywołujemy ich i nie tworzymy na nich obiektów
+*/
+/*
+wskaźnik dynamiczny
+klasa* obiekt = new klasa;
+wskaźnik statyczny
+klasa* obiekt;
+wsk = &obiekt;
+*/
+/*interfejs*/
+class Info {
+public:
+	virtual void wyswietlDane() = 0;
+};
+
+class Osoba : public Info {
+public:
+	string imie, nazwisko;
+};
+
+
+class Pracownik : public Osoba, public Info {
+public:
+	string stanowisko;
+	void wyswietlDane() {
+		cout << imie << " " << nazwisko << " " << stanowisko << endl;
+	}
+};
+
+class Uczen : public Osoba, public Info {
+public:
+	string klasa;
+	void wyswietlDane() {
+		cout << imie << " " << nazwisko << " " << klasa << endl;
+	}
+};
+
+int main()
+{
+	Pracownik* p1 = new Pracownik;
+	p1->imie = "Jan";
+	p1->nazwisko = "Kowalski";
+	p1->stanowisko = "nauczyciel";
+	p1->wyswietlDane();
+
+	Uczen* u1 = new Uczen;
+	u1->imie = "Jan";
+	u1->nazwisko = "Niowak";
+	u1->klasa = "3CE";
+	u1->wyswietlDane();
+
+}
+
+
+
+#include <iostream>
+using namespace std;
+
+class Osoba {
+public:
+    string imie, nazwisko;
+};
+class Info {
+    virtual void dane() = 0;
+};
+
+class Policjant : public Osoba, public Info {
+public:
+    string stopien;
+    void dane() {
+        cout << stopien << " " << imie << " " << nazwisko << endl;
+    }
+};
+
+class Naczelnik : public Policjant {
+public:
+    string wydzial;
+    void dane() {
+        cout << stopien << " " << imie << " " << nazwisko << " " << wydzial << endl;
+    }
+};
+
+
+int main()
+{
+    Policjant* p1 = new Policjant;
+    Policjant* p2 = new Policjant;
+
+    p1->imie = "Jan";
+    p1->nazwisko = "Komalewski";
+    p1->stopien = "Młodszy komisarz";
+
+    p2->imie = "Mariusz";
+    p2->nazwisko = "Straton";
+    p2->stopien = "Starszy komisarz";
+
+
+    Naczelnik* n1 = new Naczelnik;
+    Naczelnik* n2 = new Naczelnik;
+
+    n1->imie = "Andrzej";
+    n1->nazwisko = "Chomowicz";
+    n1->stopien = "Sekretarz";
+    n1->wydzial = "Administracja";
+
+    n2->imie = "Tadeusz";
+    n2->nazwisko = "Łochocki";
+    n2->stopien = "Inspektor";
+    n2->wydzial = "Przestepstwa podatkowe";
+
+    p1->dane();
+    p2->dane();
+
+    n1->dane();
+    n2->dane();
+}
+
+
+
+funkcje i klasy zaprzyjaźnione
+Zdarza się, że jakaś klasa/funkcja potrzebuje dostępu do prywatnych lub chronionych składowych klasy. 
+Aby zezwolić na dostęp, używa się deklaracji przyjaźni miedzy klasą a inną klasą lub funkcją.
+
+Deklaracje przyjaźni umieszcza się w klasie, 
+która ma udostępniać swoje składowe wybranym klasom i/lub funkcjom.
+
+
+class Klasa
+{
+    int moj_tajny_int;
+   
+    friend class ZaprzyjaznionaKlasa; //friend <deklaracja klasy>
+    friend void ZaprzyjaznionaFunkcja( Klasa & ); //friend <deklaracja funkcji>
+};
+
+class ZaprzyjaznionaKlasa
+{
+public:
+    void metoda( Klasa & k )
+    {
+        k.moj_tajny_int = 0; //Dostęp do prywatnej składowej innej klasy
+    }
+};
+
+void ZaprzyjaznionaFunkcja( Klasa & k )
+{
+    k.moj_tajny_int = 0;
+}
+
+int main()
+{
+    Klasa k;
+   
+    ZaprzyjaznionaKlasa zk;
+    zk.metoda( k );
+    ZaprzyjaznionaFunkcja( k );
+}
+
+
+Funkcja zaprzyjaźniona może być zdefiniowana wewnątrz klasy:
+
+class Klasa
+{
+    friend void funkcja() //funkcja, a nie metoda
+    {
+    }
+};
+
+
+szablony funkcji i klas
+
+
+#include <iostream>
+using namespace std;
+/*
+specjalizowane szablony klas również ma wyspecjalizowaną wersję dla danego typu danych lub dla danych typów danych (jeśli klasa ma wiele parametrów)
+
+*/
+template <class T>
+class Kolo {
+public:
+    T r;
+    T Obwod() {
+        return 3 * round(r) * 2;
+    }
+};
+
+
+template <> class
+Kolo<float> {
+public:
+    float r;
+    float Obwod() {
+        return 3.14 * r * 2;
+    }
+};
+
+
+template <> class
+Kolo<double> {
+public:
+    double r;
+    double Obwod() {
+        return 3.141592653589793238462643 * r * 2;
+    }
+};
+
+
+
+int main()
+{
+    Kolo<int> kolo1{ 4 };
+    Kolo<float> kolo2{ 3.6 };
+    Kolo<double> kolo3{ 7 };
+    cout << "1: " << kolo1.Obwod() << endl;
+    cout << "2: " << kolo2.Obwod() << endl;
+    cout << "3: " << kolo3.Obwod() << endl;
+}
+
+
+
+#include <iostream>
+using namespace std;
+
+/*specjalizowane szablony funkcji charakteryzują się tym że mają jedną lub więcej specjalnych wersji używanych przy danym typie danych
+taka wersja jest funkcją specjalizowana
+implementacja jej powinna się różnić od implementacji szablonu
+
+*/
+template <typename T>
+T srednia(T input_1, T input_2) {
+	cout << "\ndefault template" << endl;
+	return (input_1 + input_2) / 2;
+}
+template <>
+float srednia(float input_1, float input_2) {
+	cout << "\nfloat" << endl;
+	return (round(input_1) + round(input_2)) / 2;
+}
+template <>
+double srednia(double input_1, double input_2) {
+	cout << "\ndouble" << endl;
+	return (round(input_1) + round(input_2)) / 2;
+}
+
+int main()
+{
+	//kompilator sprawdza najpierw czy istnieją szablony specjalizowane dla danego typu danych a jeśli nie istnieją używa domyślnego szablonu
+	cout << srednia(3, 5) << endl;
+	cout << srednia(3.8, 2.21) << endl;
+	cout << srednia<double>(3.8, 2.21) << endl;
+	cout << srednia<float>(3.8, 2.21) << endl;
+}
+
+
+
+obsługa błędów i wyjątków
+
+
+
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <cmath>
+#include <sstream>
+
+using namespace std;
+
+struct Wyjatek {
+    virtual string komunikat() = 0;
+};
+
+class Format : public Wyjatek {
+    string sOcena;
+public:
+    Format(string sOcena) : sOcena(sOcena) {};
+    string komunikat() {
+        stringstream sTemp;
+        sTemp << "UWAGA BLAD! Format danej wejsciowej " << sOcena << " nie odpowiada liczbie calkowitej" << endl;
+        return sTemp.str();
+    }
+};
+class Zakres : public Wyjatek {
+    int ocena;
+public:
+    //do Zakresu przypisujemy wartość zmiennej ocena(ocena)
+    Zakres(int ocena) : ocena(ocena) {};
+    string komunikat() {
+        stringstream sTemp;
+        sTemp << "UWAGA BLAD! Wartosc danej wejsciowej " << ocena << " nie miesci sie w zakresie <1,6>" << endl;
+        return sTemp.str();
+    }
+};
+
+bool wejscieFormat(string sDana) {
+    for (int i = 0; i < sDana.length(); i++) {
+        if (isdigit(sDana[i]) == false) {
+            return false;
+        }
+    }
+    return true;
+}
+
+bool wejscieZakres(int iDana) {
+    if ((iDana >= 1) && (iDana <= 6)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+int main()
+{
+    try {
+        string sOcena;
+        cin >> sOcena;
+        if(wejscieFormat(sOcena) == false) {
+            throw Format(sOcena);
+        }
+
+        int ocena = stoi(sOcena);
+
+        if (wejscieZakres(ocena) == false) {
+            throw Zakres(ocena);
+        }
+
+        if (ocena == 1) {
+            cout << "uczen nie otrzymal promocji";
+        }
+        else {
+            cout << "uczen otrzymuje promocje";
+        }
+    }
+    
+    catch (Wyjatek& wyjatek) {
+        cout << wyjatek.komunikat() << endl;
+    }   
+}
+
+
+
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+bool wejscieFormat(string sDana) {
+	for (int i = 0; i < sDana.length(); i++) {
+		if (isdigit(sDana[i]) == false) {
+			return false;
+		}
+	}
+	return true;
+}
+
+bool wejscieZakres(int iDana) {
+	if ((iDana >= 1) && (iDana <= 6)) {
+		return true;
+	} else {
+		return false;
+	}
+}
+int main()
+{
+	/*
+	//przykład bez dodanej obsługi wyjątków i błędów
+	string sOcena = "10";
+	if (wejscieFormat(sOcena)) {
+		int ocena = stoi(sOcena);
+		if (wejscieZakres(ocena)) {
+			if (ocena == 1) {
+				cout << "uczen nie otrzymal promocji";
+			} else {
+				cout << "uczen otrzymuje promocje";
+			}
+		} else {
+			cout << "Uwaga blad!" << endl << "wartosc danej wejsciowej nie miesci sie w zakresie <1,6>" << endl;
+		}
+	} else {
+		cout << "Uwaga blad!" << endl << "Format danej wejsciowej nie odpowiada liczbie calkowitej" << endl;
+	}*/
+
+	//przykład z dodaną obsługą
+
+	//try zawiera inspektowany fragment kodu
+	try {
+		string sOcena = "5+";
+		//ta zmienna s1 jest w sumie tu useless
+		string s1 = "blad";
+		if (wejscieFormat(sOcena) == false) {
+			//po throw fragment kodu zawarty w try przestaje się wykonywać
+			throw sOcena; //zgłoszenie błędu, to wyrzuca tylko typ błędu, rozróżnia tylko typ błędu, nie rozróżnia różnych poszczególnych zmiennych
+		}
+		int ocena = stoi(sOcena);
+		if (wejscieZakres(ocena) == false) {
+			//po throw fragment kodu zawarty w try przestaje się wykonywać
+			throw ocena; //zgłoszenie błędu, to wyrzuca tylko typ błędu, nie rozróżnia różnych poszczególnych zmiennych
+		}
+		if (ocena == 1) {
+			cout << "uczen nie otrzymal promocji";
+		}
+		else {
+			cout << "uczen otrzymuje promocje";
+		}
+	}
+	catch (string s1) {
+		cout << "Uwaga blad! " << endl << s1 << endl << "Format danej wejsciowej nie odpowiada liczbie calkowitej" << endl;
+	}
+	catch(int) {
+		cout << "Uwaga blad!" << endl << "wartosc danej wejsciowej nie miesci sie w zakresie <1,6>" << endl;
+	}
+	
+}
+
+
+
+
+
+
+
+
