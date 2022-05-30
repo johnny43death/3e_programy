@@ -66,6 +66,7 @@ int main(int argc, char *argv[]){
             QObject::connect(button[i][j],&QPushButton::clicked,[=](){
                 change(i,j);
                 check();
+
             });
         }
     }
